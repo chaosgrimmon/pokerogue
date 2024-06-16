@@ -3036,9 +3036,10 @@ export class FriendshipPowerAttr extends VariablePowerAttr {
 
     if (user instanceof PlayerPokemon) {
       const friendshipPower = Math.floor(Math.min(user.friendship, 255) / 2.5);
-      power.value = Math.max(!this.invert ? friendshipPower : 102 - friendshipPower, 1);
+      power.value = !this.invert ? friendshipPower : 102 - friendshipPower;
     }
 
+    power.value = Math.max(power.value, 1);
     return true;
   }
 }
