@@ -169,7 +169,7 @@ export class Egg {
       // If species has no variant, set variantTier to common. This needs to
       // be done because species with no variants get filtered at rollSpecies but since the
       // species is set the check never happens
-      if (!getPokemonSpecies(this.species).hasVariants()) {
+      if (!getPokemonSpecies(this.species).hasVariants() && !getPokemonSpecies(this.species).hasFormVariants()) {
         this._variantTier = VariantTier.COMMON;
       }
     }
