@@ -829,7 +829,7 @@ export default class PokemonSpecies extends PokemonSpeciesForm implements Locali
       return false;
     }
     for (let i = 0; i < this.forms.length; i += 1) {
-      if (variantData.hasOwnProperty(`${this.speciesId}-${this.species.forms[i]?.formKey;}`))) {
+      if (variantData.hasOwnProperty(`${this.speciesId}-${this.species.forms[i]?.formKey}`))) {
         return true;
       }
     }
