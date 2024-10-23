@@ -346,6 +346,11 @@ export abstract class PokemonSpeciesForm {
     }
 
     switch (this.speciesId) {
+    case Species.DODUO:
+    case Species.DODRIO:
+    case Species.TORCHIC:
+    case Species.COMBUSKEN:
+    case Species.BLAZIKEN:
     case Species.HIPPOPOTAS:
     case Species.HIPPOWDON:
     case Species.UNFEZANT:
